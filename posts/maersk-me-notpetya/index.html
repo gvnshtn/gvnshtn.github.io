@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Maersk, me &amp; Notpetya - Gavin Ashton</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://gvnshtn.comfavicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.4b2bfb3701049fe0da3e8d6b9d15186ba1dc7e294f0be3e2bca21bb8a330f5dd.css">
+  
+
+  
+    
+    <meta property="og:title" content="Maersk, me &amp; Notpetya"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://gvnshtn.com/posts/maersk-me-notpetya/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@gvnshtn"/>
+    <meta name="twitter:creator" content="@gvnshtn"/>
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="https://gvnshtn.com">Gavin Ashton</a>
+  <div class="menu-main">
+    <ul>
+        
+        
+            <li class="menu-item-about">
+                <a href="/pages/about/">About</a>
+            </li>
+        
+            <li class="menu-item-posts">
+                <a href="/posts/">posts</a>
+            </li>
+        
+    </ul>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>Maersk, me &amp; Notpetya<span class="dot">.</span></h1>
+      
+    </div>
+    <div class="content">
+      <p><a href="https://www.maersk.com/">Maersk</a> is the world&rsquo;s largest integrated shipping and container logistics company. I was massively privileged (no pun intended) to be their Identity &amp; Access Management (IAM) Subject Matter Expert (SME), and later IAM Service Owner. Along with tens (if not hundreds) of others, I played a role in the recovery and cybersecurity response to the events of the well-publicised notPetya malware attack in 2017. I left Maersk in March 2019, and as is customary  I wrote the obligatory thank you and goodbye note. But there was always a lot more to add. A story to tell.</p>
+<p>Establishing the exact content and format of this post has been difficult. It hasn’t been clear where to start.  There was a lot of personal angst around specific incidents or people involved and I didn&rsquo;t feel this would be of any particular benefit to anybody. So I&rsquo;ve tried to focus on the main timeline and the lessons.  So this isn&rsquo;t <strong>everything</strong>. But the experience we had at Maersk, or at least significant elements of it, could happen to any organisation. In fact, it does happen, to all kinds of organisations, all of the time, and that&rsquo;s why I&rsquo;m publishing this.</p>
+<p>I want to help protect other folks from making these same mistakes, because there&rsquo;s a lot of what seems to be defeatist wisdom out there; Yes, it is inevitable that you will be attacked. It is inevitable that one day, one will get through. And obviously, you should have a solid contingency plan in place in case of the worst. But that&rsquo;s not to say you don&rsquo;t attempt to put up a damn good fight to stop these attacks in the first case. Just because you know the bad actors are coming, doesn&rsquo;t mean you leave your front door open and make them a cup of tea when they walk in. You could just lock the door. Staying with the home analogy; Yes, there&rsquo;s security cameras and wizard cloud-connected &lsquo;Internet of Things&rsquo; (IoT) devices and all kinds of expensive measures and widgets, but a lot of organisations fail simply on the basics. Lock the damn door.</p>
+<p>With the above said, ultimately I want this to be a positive space, for constructive discussion. Some negative things did happen, but I want to focus on what other organisations can learn from it all. So, you might be an engineer, or in operations, you might be in service management, maybe you work the Security Operations Center (SOC), you might be the Chief Information Security Officer (CISO) or a vendor. I want this to be agnostic, something anybody can consume and take their own lessons from.</p>
+<p>I’d be grateful for any comments. It was an event worth talking about, if you and I can expand our knowledge through a discussion, that would be awesome.</p>
+<p>This story spans my time at Maersk from 2015 through to 2019. I’m going to start the story just before I joined Maersk, moving through the first couple years into the events of notPetya and the immediate recovery effort, onto the 18 months or so following as we added controls and protections before I eventually left. I&rsquo;ll finish up with a ‘summary’ of what I consider to be the main lessons.</p>
+<p>I’m posting this fully aware that I’ll think of something else tomorrow. Another anecdote, another point to make. But at some stage, you simply have to call time and let these things go.</p>
+<p>Before we begin, if you want to skip straight to the the lessons, <a href="#learn-the-things">they&rsquo;re here</a>. But to get the whole picture, I recommend you don&rsquo;t&hellip;</p>
+<hr>
+<h2 id="2015">2015</h2>
+<p>I started working for Maersk in early 2015. On a miserable, cold, rainy winters night at the back-end of 2014, walking to Paddington station from a job in London, I got a call from a recruitment agent; There’s a well-regarded, multi-national shipping company based not too far from home, looking for someone like me and I’d be a great fit. Would I be interested?</p>
+<p>After a very long interview process which nevertheless went well, the folks seemed like a good crowd and the job sounded exciting. Travel was involved and the challenge was interesting. Looks good! Once my notice period was up, I was the new Identity SME at Maersk Line UK Ltd.</p>
+<p><img src="/public/images/esplanaden.jpg" alt="Esplanaden, København. Photo by Esther Wilhelmsson."></p>
+<h3 id="history--culture">History &amp; Culture</h3>
+<p>Maersk has a long and storied history; They’ve taken part in all kinds of significant historic events and dramas on the open seas. Shortly after joining, I was fortunate enough to be given a guided tour of the fabulous Esplanaden HQ in København, Denmark. The place is like a James Bond set from the 60’s, all concrete and glass. Which makes sense as that’s when it was built. What was just as amazing, is how the Maersk family still owns the majority of the shares and the company really does live by the <a href="https://www.maersk.com/about/core-values">values</a>. It was, up until then, the only time I’ve ever really <strong>felt</strong> that. Typically, a mission statement is something that sits framed on a wall, without people paying much attention to it. At Maersk, the values are constantly called back to:</p>
+<blockquote>
+<p>Constant Care ∙ Humbleness ∙ Uprightness ∙ Our employees ∙ Our name</p>
+</blockquote>
+<h3 id="the-usual-it-reorganisation">The usual IT reorganisation</h3>
+<p>One of the interesting features of the IT function at Maersk is the way IT services are delivered across the group. At the time, the organisation was diversified across multiple business units serving different sectors - logistics, energy, shipping. At some point in the past, each business unit had run their own IT. But with Maersk Line (the shipping business) being by far the largest of them all, their IT function naturally became dominant and had started providing some shared IT services to the other business units. A few years of politics and power struggles later, the energy businesses were sold off to consolidate on the core functions - shipping and logistics, IT was centralised, a digital and cloud-first strategy was established at the very highest levels of the organisation. Things were (and still are) looking great for IT.</p>
+<h3 id="the-honeymoon">The honeymoon</h3>
+<p>Before all that really kicked off, my first project was underway. The company had already begun a process to plug the shared HR systems into Active Directory via a well-known Identity &amp; Access Management (IAM) product, with some wizard custom web services and database backend services to facilitate the integration. This was an exciting project, involving colleagues from both the UK and Denmark, with functions across IT, HR and the broader business, and technical IAM elements being driven out of a Microsoft Partner. Initially my thoughts were to supplant these folks with my previous employer (also a Microsoft Partner) but honestly, their performance was so good, their passion so inspirational, I couldn’t help but love those folks and we remain good friends.</p>
+<p>The project took us all the way to the end of 2015, and it was a hell of a ride. We had limited systems to work with. I’d regularly be up until 4am running tests of various kinds with systems hopelessly underspecified for the job. Our server assets were managed by a well-known Managed Services Provider (MSP). Systems were slow, but the solution developed at a pace thanks to efforts from all quarters. It was a real team effort and it was smashing to be involved in something which you could tell everybody wanted to make a success - no massive nay-sayers or I-told-you-so’s anywhere.</p>
+<h3 id="the-relationship-cemented">The relationship cemented</h3>
+<p>Maersk has an amazing history, it does awesome things, it has great values. It’s a great place to work. But it was that project that made me feel like I’d found my family. The go-live was spread over a few weekends and we had some real adventures into the small hours, including a 3am ‘break-in’ to get physical access to an old server of ours which had some issues! Eventually, the solution was in, and out of around sixty thousand active people, we only deleted a single account incorrectly. Rather good going!</p>
+<h2 id="2016">2016</h2>
+<p>For the success of the IAM project we all received a nice pat on the back, I got a top mark in my first-year performance review and managed to get myself on a flight out to Microsoft Ignite in Atlanta for my troubles. All this reinforcing my massively positive experience.</p>
+<h3 id="principle-of-most-privilege">Principle of Most Privilege</h3>
+<p>I had come into Maersk as someone who’d spent their career working on (what we call today) identity and security projects: Identity management, privileged access management, smartcard sign-in systems and so on. With the IAM system humming along taking care of the typical joiners, movers and leavers processes, my next target was privileged access. Securing the keys to the kingdom. During the previous project I had noticed all kinds of gaps. Essentially, the principle of least privilege was not generally followed. Shipping is a huge business but operates on relatively thin margins. IT had up until that point had been managed as a cost centre to be minimised, rather than as a business enabler. In the race to the bottom, security controls had ultimately suffered and become a secondary concern to delivery. With the historical organisational structures within IT, we had multiple security functions with no clear lead, and limited funding. Cue two years of fruitlessly pushing for privileged access controls.</p>
+<h3 id="lost-opportunity">Lost opportunity</h3>
+<p>In that time, we could and should have been in the process of applying consistent security policies to control accounts and access. This is something you can do gradually. You can apply The New Standard and build services to that standard, then over time move services into that standard. You get quick wins with new services, and eventually your older systems catch up or die off. The more funding you get, the faster that process becomes - but you get there. Typical examples of the types of controls I’m talking about:</p>
+<ul>
+<li>Service accounts should not be used across multiple applications.</li>
+<li>End user productivity accounts should not have admin privileges anywhere.</li>
+<li>Server admin accounts should not have admin privileges on workstations.</li>
+</ul>
+<p>The list goes on, but this is all basic Microsoft Security Baseline or Tiered Access Model stuff.</p>
+<p>During this period, our MSP were trying to sell a Privileged Access Management (PAM) product to place credential cycling controls over the MSP credentials used to access our MSP-hosted systems; All the while continuing the practice of placing a single Active Directory (AD) group, full of all kinds of both Maersk and MSP folks, into the local administrators groups on all Maersk MSP-hosted servers. This wouldn’t suffice. Apart from the risk around the access (regardless of the credentials), what about all the non-MSP hosted kit? So at the same time, I was also pushing the PAM component of our IAM solution as an alternative. In secret, even I knew that wouldn’t really address every scenario… What about *nix, what about network devices and so on?</p>
+<p>In the back of my mind, something a little more industry-grade was necessary, but with the focus on cost reduction being hammered home, this was simply wishful thinking. I didn&rsquo;t have millions in my back pocket!</p>
+<hr>
+<h2 id="2017">2017</h2>
+<p>Whilst I bashed my head against various brick walls around privileged access controls, we had other activities going; We moved our operations team to a new provider, we had some fun merger and acquisition activity when Maersk bought Hamburg Sud, mail automation was getting underway (all self-service with no manual processes involved in the provision and management of mail addresses globally), we moved into new digs in <a href="http://taskblog.co.uk/home/2017/8/11/maersk-award">Maidenhead</a> (this may have been in 2016) - Surface Hubs on almost every floor, decent (and free) coffee machines everywhere, modern breakout zones. All the facilities you could possibly hope for! So, like anywhere, we weren’t doing all the things you might want to but there was enough going on, and life was good.</p>
+<p>Far away in a distant land, Russian state-sponsored actors had been targeting Ukraine. All businesses operating in Ukraine typically used a specific finance application. I&rsquo;m not sure if that&rsquo;s still the case! The attackers had compromised the vendors of this application and injected the notPetya malware into a software update for the app. Dutiful finance people updating their software were unwittingly allowing some of the most destructive malware ever seen into their systems.</p>
+<h3 id="notpetya">notPetya</h3>
+<p>On the 27th June 2017 (almost three years to the day as I post this), the shit hit a really, really big fan.</p>
+<p>At around 10am we were in one of the glass-walled meeting rooms having a team meeting. People outside started to look excited, some minor outage probably going on. And then some rude individual came and kicked us out, and then we realised: It appeared some workstations in the office were going dark. Then it transpired no, it wasn’t just our office. Globally devices were going dark. Oh, servers too? Domain Controllers are gone? Oh&hellip; We just lost the lot. Within a couple of hours, it was clear this had impacted every single domain-joined Windows laptop, desktop, virtual machine and physical server around the planet. The organisation had just been sent back into the dark ages.</p>
+<p><img src="../gvnshtn.github.io/public/images/notPetya.png" alt="Maersk screens around the world, 27th June 2017"></p>
+<p>Let that sink in. What would you do? For many, this would have been an Extinction Level Event (my little <a href="https://en.wikipedia.org/wiki/Deep_Impact_(film)">Deep Impact</a>. Luckily for us, Maersk had access to some very deep pockets.</p>
+<p>The eye opener for me was, we weren’t even the target. This was a huge surprise, to me at least. I’d always considered cyber-attacks to be targeted to some degree. But modern cyber warfare is vicious and takes no prisoners. So be under no illusion, you might not believe yourself to be at much risk, but it might not even be about you. If you receive data from the internet (which, of course is true), you would do well to pay close attention to all of this. Cyber-attacks were not uncommon before, but private and state-sponsored cyber-attacks have seen a significant increase in the era of COVID-19. There’s never been a better time to do some of the basics we’ll be talking about. Maybe you’ve been lucky and never had to survive a significant malware attack, but they can strike at any moment. The attackers don’t care about scope. They don’t care about capacity planning or budgets. They certainly don’t care about you. You need to be prepared.</p>
+<p>The notPetya malware was unusual in that typically what you will see with malware is a device gets encrypted with a message to go and pay some ransom. A worrying number of organisations do (around 50%), which makes these types of attack even more prevalent as we’re teaching criminals that crime does pay. But notPetya was different, there was nobody to pay, it was designed purely with destruction in mind. And destroy it absolutely did.</p>
+<h3 id="a-bitter-pill">A bitter pill</h3>
+<p>At Maersk, there had been no consistent security baselines. Some vague written policies existed but were frankly, largely ignored. It was not uncommon to find people using their normal productivity accounts to perform administrative tasks on workstations and even servers. Server administrators would have standing administrative access to huge numbers of systems, even in better-managed parts of the business where we had begun to adopt cloud IaaS. There were not many domain administrators, but these were used to perform administrative tasks on all kinds of devices. Service accounts would frequently be given membership of local administrator groups ‘to make things work’, rather than properly delegated permissions. And service accounts would also be shared by multiple applications. These behaviours were not unique to Maersk, they may very well be prevalent within your own organisation today. So I’m not pointing these things out to single out Maersk at all, rather than highlight these are risks which many (if not, most) are still taking.</p>
+<p>With notPetya having established a foothold through the finance package update, notPetya used common pass-the-hash techniques to spread horizontally across the organisation, and vertically up into servers and domain controllers. The lack of standardised and consistently applied privileged access controls, made it trivial for notPetya to wipe Maersk out.</p>
+<p>Yes, things like network segmentation would help to slow the spread. Things like a SOC would help us see the activity before the fateful day arrived. Patching would absolutely have helped (seriously, if you are waiting to install critical security patches you are doing it wrong). But ultimately, the fundamental risk we had failed to address was management of privileged access.</p>
+<p>That was a bitter pill to swallow. The controls I’d been evangelising, could have saved Maersk from the impact. But I’ll bet I wasn’t the only one feeling responsible for this. And I absolutely didn’t get the impression that any fingers were pointing in my direction, far from it. The following few months were going to see a flurry of activity, with the kinds of measures I had been looking to deploy since I joined the company all getting the green light. People were finally listening. It’s amazing, the doors a good cyber-attack opens.</p>
+<h3 id="finding-our-feet">Finding our feet</h3>
+<p>In the immediate weeks following The Event, it was all about restoring Active Directory. Considering Active Directory was deployed across hundreds of domain controllers globally, disaster recovery processes had only ever accounted for a loss of a site or datacentre. Nothing in the plans had accounted for “We have lost everything, everywhere, all at once”. After some herculean and hair-raising efforts across Maersk, Microsoft and our partners, we had our directory service back. This involved some source-code level action, people being put on flights from all over the world with various bits of data and equipment. It reminded me very much of an episode of 24, just without the dramatic incidental music, and obviously it all took much more than 24 hours!</p>
+<p><img src="../gvnshtn.github.io/public/images/MaidenheadSunrise-1024x576.png" alt="Sunrise at the office: Views across Berkshire at any time of day or night were not uncommon in the months following the attack."></p>
+<p>When the very first domain controller came up, it was running on a Surface Pro 4. Once things were back to some degree of normality, we almost got that thing mounted on a plinth; I really hope that since I left, someone got around to it. I’m almost certain it’s not the kind of workload Panos Panay had in mind. Can you imagine at the next Surface Pro model announcement? You can collaborate so easily! The design is awesome! You can restore critical infrastructure from a total catastrophe with it!</p>
+<p>One of the things I’ll always cherish about those early days was the tight team dynamic going on. The identity services team all pulled together. Everyone from ops, engineering, architects and managers, partners and vendors. We were all in it. And we broke out into little tactical squads. We cornered a spot in the office and partitioned it off with a giant whiteboard. To get stuff done, we had a rota for people to sit next to the whiteboard to triage any questions or demands coming from the business or other application teams, leaving the rest of team to get on with the task at hand. But there was always respect and only on a couple of occasions did things get heated, which was understandable when the world seemed to be on fire. A real team effort.</p>
+<p>By rights, the directory should have been gone. I’m certain most organisations would have been building a brand-new directory, but we were incredibly lucky. Enough praise was never extended for those efforts. But it was taking its toll, the number of people working around the clock in those early days was staggering. People eating and sleeping in the office. The company booked up every hotel room in the vicinity. People were ferried to and from work in taxis as they were too tired to drive by the end of a shift. Thing is, this went on for weeks and even months for some people. And it affected more than just the people on the ground. This affected careers, families, lives. People don’t think beyond the headline “Another big name hacked”, but the fallout is absolutely staggering.</p>
+<p>You don’t want that.</p>
+<h3 id="doing-the-things">Doing the things</h3>
+<p>One of the big four had descended whilst we were amid restoring services. New faces in suits were walking the floors, taking notes, getting involved in conversations, influencing decisions. Great! More voices, a broader spread of expertise, always welcome in my book.</p>
+<p>Microsoft were also providing excellent leadership, I appreciated how within days we were deploying Privileged Access Workstations (PAWs) and the Tiered Access Model (TAM) in double quick time. These technologies are a great feature of the <a href="https://aka.ms/MCRA">Microsoft Cybersecurity Reference Architecture</a>, which organisations should absolutely pay close attention to. And the cost really isn’t significantly more than what you have today, particularly compared to the sums involved in a lot of the multi-million technology solutions out there. The TAM (and by extension PAWs) are more about establishing processes where today you likely have few or even none. It’s about providing clarity, establishing boundaries and setting expectations. You do have a small number of additional devices to cover administrative access, but that’s it.</p>
+<p><img src="../gvnshtn.github.io/public/images/paws-1.jpg" alt="PAW (sorry, not sorry)"></p>
+<p>The benefit is significant. The more you spend, the more we’re arguably into the space of diminishing returns, but this is one space where you’ll absolutely make your money back if an attacker were to find a way in.</p>
+<p>One thing which became abundantly clear was how quickly people can achieve progress when given some freedom. This got lost later when we got bogged down in the mire of what I called Being Consulted. The times immediately following The Event demonstrated the enormous value of getting the right people in a room, empowering them to make a decision, and moving on that decision. If it’s the wrong one, don’t be precious about it, you can swap it out for an alternative later. Don’t put anything in stone. But fast movement is by far more effective than spending months and months wasting money talking about things that have gone stale before you’ve even started.</p>
+<h4 id="windows-10">Windows 10</h4>
+<p>One enormously positive thing to come about was the decision to accelerate a Windows 10 deployment. The organisation was already halfway through creating a new Windows 10 build as the attack hit. Since all workstations had to be rebuilt anyway, the opportunity was taken not to roll back to Windows 7. Over a couple of weeks, a truly gargantuan effort was achieved in finalising the build, buying every USB stick within a significant radius, a lot of expensive USB copying equipment, and sending those keys out to desktop support teams across the planet. Maersk had almost overnight, completely overhauled the laptop estate. And all those instances of local admin privileges weren’t coming back.</p>
+<p>The best bit for me was we had established a security baseline on the client. No longer was there an assumption that people would just get permanent administrative access, in fact – they would get none. The TAM was becoming embedded.</p>
+<h4 id="azure-ad-single-sign-on-with-password-hash-sync">Azure AD Single Sign-On with Password Hash Sync</h4>
+<p>One massive saving grace was the decision move to Azure AD Single Sign-On (SSO) with Password Hash Sync (PHS) literally a couple of weeks before the attack. With AD still down, this meant people were still able to sign into Azure AD and access cloud-based SaaS apps like Office 365! Following an effort to mandate MFA and modify some Conditional Access policies, Maersk was able to collaborate again. The decision was also made, given the circumstances, to enable the Identity Protection feature.</p>
+<p>It still stuns me to this day that we have this conversation about Active Directory Federation Services (AD FS) vs Azure AD SSO with PHS.</p>
+<p>AD FS lets you sign into an app. You&rsquo;ve got to manage all the infrastructure, networking, firewalls. All of that&rsquo;s got to be built up in a resilient fashion. You more than likely don&rsquo;t get to see if users are compromised <a href="https://www.microsoft.com/security/blog/2020/04/23/protecting-organization-password-spray-attacks/">password spray attacks</a> attempt to sign-in to a bunch of accounts using a common password to try and get a foothold). There&rsquo;s certs to manage. It ties your cloud availability to on-premises assets. It slows down the sign-in process. It&rsquo;s complex, it&rsquo;s heavy lifting, I&rsquo;ll bet it&rsquo;s not really what your business is really about.</p>
+<p>With Azure AD SSO with PHS, you get:</p>
+<ul>
+<li>more assurance about the status of your identities</li>
+<li>more options when configuring Conditional Access rules</li>
+<li>better performance</li>
+<li>higher availability</li>
+</ul>
+<p>If you&rsquo;re worried about that phase &lsquo;password hash sync&rsquo;. This is not reversible in any sense and you are not storing your passwords in the cloud, there&rsquo;s a great write-up by Royce Williams <a href="https://www.techsolvency.com/passwords/dehashing-reversing-decrypting/">here</a>. You are not synchronising the password. It’s hashed and salted multiple thousands of times before the resulting value is stored. So not enabling PHS &lsquo;because security&rsquo;, I&rsquo;m sorry but you&rsquo;re mistaken. Honestly, get to it. Even if you only use the Compromised Credentials report rather than the full Identity Protection service, this combination of services is awesome.</p>
+<h3 id="getting-back-to-good-delayed">Getting back to good (delayed)</h3>
+<p>We got the barebones of the PAW and TAM features in fast. This enabled us to provide an authoritative voice as applications started to come back into the environment: You will need a tier one admin ID. No, you shouldn’t use the old shared service account. And so on. Unfortunately, this guidance had to come from whoever was leading at any given moment. Remember, the organisation wasn’t working nine to five. This was a round-the-clock operation for weeks and months and in lots of different locations. And on some shifts, the leadership was not as razer-focussed on bringing things back securely. This was completely understandable, the business wanted things back as quickly as possible. But before you knew it, the thunder had been stolen from restoring the organisation back into a good position from a security perspective. This was going to be a long, uphill struggle.</p>
+<hr>
+<h2 id="2018">2018</h2>
+<p>The following is a diagram that was first drawn-up in 2017 but got frequently thrown around as we discussed how things were going:</p>
+<p><img src="../gvnshtn.github.io/public/images/TheSausageFactory.png" alt="The Sausage Factory, moving things from bad to good."></p>
+<h3 id="the-sausage-factory">The Sausage Factory</h3>
+<p>The Sausage Factory diagram shows how we had deployed the TAM, with the typical three tiers for workstations, servers and domain controllers. It shows how the Domain Controllers and Windows 10 estate had been built into the TAM and associated accounts all nicely embedded. But any servers being restored, plus some virtualised Windows 7 systems that were also coming back - were still in what I called the Wild West (in red). The same old state of no controls was an open wound and I was razer focussed on chasing that down.</p>
+<p>The Sausage Factory was envisaged as the process of moving things from a bad state to a good state where they would be integrated into the TAM (plus some other controls we were reviewing). We also had discussions starting around a full Privileged Access Management (PAM) solution to handle privileged credentials.</p>
+<p>I won’t discuss the specifics of the solution chosen, nor how it was deployed for obvious reasons. But I do need to discuss some elements which caught me off-guard and ultimately led to me leaving an organisation I felt at home in. The events still affect me today and it’s one of the reasons I’ve decided to tell the story.</p>
+<h3 id="pam-becomes-a-thing">PAM becomes A Thing</h3>
+<p>By the time notPetya hit, some internal shuffling had occurred, and I was now the Service Owner of the IAM platform. Although I found I was still performing a more technical leadership role than anything else, on projects requiring a degree of IAM integration, or otherwise things which would typically be outside the scope of a typical Service Owner. This isn’t a gripe; it demonstrates the opportunities that were there. And to be fair, I was less interested in Standard Operating Procedures and service statistics than trying to develop the service. The mail automation project described earlier is a good example of something I’d initiated and driven. Throughout my time I had built up great relationships with colleagues in the UK, Denmark and farther afield. I was well respected and enjoyed a healthy relationship with everyone I interacted with.</p>
+<p>The dynamics began to change post-notPetya. The interest in privileged access controls was no longer isolated to some engineers, infrastructure operations teams, our MSP and me. We were suddenly able to make great gains into things like having separate server and workstation administrator accounts. Senior leadership was aware of and prioritising this ‘PAM’ thing. And external influencers were now on the scene. Unfortunately, these external influences also had the ear of senior leaders who previously hadn’t even met me.</p>
+<h3 id="the-intent">The intent</h3>
+<p>I like to say any security control does not exist in isolation. To address a given threat, a layered approach is required. I call it going around the horn; Half a sailing metaphor referencing the challenge of sailing around Cape Horn and half a reference to the classic BBC panel show Round the Horne! But the National Institute of Standards and Technology (NIST) describe this best through their five principles:</p>
+<blockquote>
+<p>Identify ∙ Protect ∙ Detect ∙ Respond ∙ Recover.</p>
+</blockquote>
+<p>This attack had clearly impacted Active Directory and domain-joined systems most significantly. Yes, other areas of the estate had security gaps, some of them significant, but the ones left open in AD had really enabled the worst of it. Clearly of a lack of consistently applied security baselines and processes was a big gap. And to be fair, as soon as a PAM product had been selected and deployed, we got the keys to the kingdom (Domain Admin, Enterprise Admin) credentials protected just as soon as possible. But in terms of controls, it’s not just about having the controls, it’s knowing they’re being applied, identifying where they’re not being applied, and being able to respond to those cases. There’s a bit to do, you’ve got to go around the horn, you&rsquo;ve got to make sure you&rsquo;ve covered those five principles.</p>
+<p>So that’s where the Sausage Factory came in. We were to set up the Good State, then transition systems into it. We were getting more into Security Information and Event Management (SIEM) functionality and so the Detect and Respond side was looking good. Moving things was basically a case of configuring various artefacts in AD (accounts, groups, Organisational Units, Group Policies), then moving systems into those and performing application-level configuration to take the setup. Straightforward enough. Supporting processes would then pick up the rest in terms of reporting and so on.</p>
+<p>Moving things through the Sausage Factory was one thing, but we still had the question about The Wild West and those old admin accounts that in many cases had access to virtually anything not migrated into the TAM. I didn’t need those assets polluting the tiered access stuff. The idea was to retain them purely for access to ‘stale’ systems yet to be remediated, then delete them once access was no longer required – either as systems were moved into the TAM or simply retired altogether.</p>
+<h3 id="vs-reality">vs Reality</h3>
+<p>Our friends from the big four consultancy were under pressure to deliver. And had an idea which on paper would seem impressive - to throw all administrative accounts everywhere into the PAM solution. This was problematic:</p>
+<ol>
+<li>There was a need to enrol administrative accounts into the PAM solution - no doubt. And while this idea would minimise the availability of those accounts, they would still have access to huge swathes of the estate. Their ability to do significant levels of damage would not disappear. Plus, given the numbers of these old accounts, this process was going to take an extraordinarily long time to process. This would keep us distracted for a significant length of time, and cost an incredible amount of money, and not achieve a significant overall reduction in risk.</li>
+<li>There are many use-cases for administrative accounts. For example, Maersk is a cloud-enabled organisation, with many accounts created on-premises but not used until they had been synchronised to the cloud where external developers or third-party suppliers would sign-in to cloud consoles on non-domain joined systems to perform specific tasks on discrete cloud-based systems. If those folks couldn’t reach the PAM console, the approach would stop their ability to work, unless some additional processes/systems were established to allow remote access to the PAM solution - which wasn’t immediately forthcoming.</li>
+</ol>
+<p>The discussion was brief, and abrupt. I simply couldn’t support it. For the reasons above, the approach took focus away from our fundamentals. But before we knew it, the story had been sold to senior leadership and it was happening. It was either get on with it or get out. All the while, blockers were put up in front of the original plan; People were quickly falling back into the old reluctance to change.</p>
+<p>This still pains me today. I saw how when these organisations get hit, in swoop the consultancies. Being hit by malware demonstrates a gap, but this should not mean a Security Tax for the foreseeable. There are things you can do, today, which may seem expensive but are nothing like the eye-watering price tag of a significant malware attack. It’s far better to start attacking these issues head-on, than wait for it to become an unstoppable beast.</p>
+<p>Ultimately, I wish I’d had greater visibility within the upper sections of the IT organisation to better respond to the suggestions being made. This wasn’t in my power to influence, and really, I should stop beating myself up for it. Towards the end of 2018, the situation became untenable as I felt powerless to influence the damage being done and I handed in my notice, before bottling it at the last second. I loved Maersk and was determined to see this through.</p>
+<hr>
+<h2 id="2019">2019</h2>
+<p>I was able to hang in for a few months, until an unexpected opportunity came up in February 2019. My wife and I have three children, who were young at the time. We had sold our home. We were home-schooling. And we realised there was basically nothing keeping us tied down. My wife was desperate to go travelling and everything considered, it sounded like a once-in-a-lifetime opportunity. We’d be fools to pass it up.</p>
+<p>Regrettably, Maersk simply couldn’t offer any kind of sabbatical - which was a huge shame, leaving wasn’t what I wanted to do at that stage - but this was the kind of opportunity we’d regret not taking and I found myself having to hand in my notice, again!</p>
+<h3 id="speaking-truth-to-power">Speaking truth to power</h3>
+<p>But I couldn’t leave without telling those senior stakeholders what was going on, and what their options were. Even if this meant telling some home truths and ruffling some feathers. So as a final effort to try and steer things in a more productive direction, I arranged a meeting on my last day with some of these leaders but it didn’t happen for one reason or another. So, I typed up my notes, sent them to the senior management team in the vain hope someone, anyone, would listen, and left. I was off in a motorhome with my family. For the next six months we were headed off around Europe on our <a href="https://photos.app.goo.gl/e5GVpueqHS5Q2sn19">Big Adventure</a>.</p>
+<p><img src="../gvnshtn.github.io/public/images/france.jpg" alt="Off to mainland Europe!"></p>
+<hr>
+<h2 id="learn-the-things">Learn the things</h2>
+<p>I started off describing this section as a summary, the typical Call To Action you’ll find in any good blog. But there’s no way around it. There’s some content to crank through.</p>
+<h3 id="this-is-about-you">This is about you</h3>
+<p>This is about you and your organisation. Every single week, another big name is sprawled across the headlines as the subject of another huge cyber-attack with data stolen or systems down. At a depressing frequency, the causes are all too familiar. The stats are there, identity is your #1 security boundary. No organisation should operate on the assumption that they won’t be next. The attackers might be on the verge of bringing you down. Do not make it easy for them. Manage and protect your identities and access.</p>
+<h3 id="engage-with-listen-to-and-trust-your-people">Engage with, listen to, and trust, your people</h3>
+<p>Leaders! Don’t rely solely on peers or middle management who may (for completely understandable reasons) try to paint a rosy picture or inadvertently fuzz the details. Get down and dirty. Speak to the folks on the floor, find out what they honestly think. This will build trust up and down the organisation. You need to believe in the people who have been hired for their expertise, and the people need to believe their leaders understand and represent them. I’ve got plenty of experience of these kinds of leaders in organisations both large and small, and the results are tangible. Pro tip: With digital interactions becoming more prevalent in these COVID-19 times, <a href="https://yammer.com">Yammer</a> is an awesome tool for direct digital engagement at an enterprise level.</p>
+<h3 id="the-human-cost-of-a-cyber-attack">The human cost of a cyber-attack</h3>
+<p>The impacts of a cyber-attack go far and way beyond what you read about in the headlines. An organisation has a duty of care to its customers, employees, contractors and partners. In the case of the cyber-attack, Maersk was a model example in being open, frank and honest with the world about what was going on:</p>
+<p><img src="../gvnshtn.github.io/public/images/MaerskComms.png" alt="Update from Maersk on the situation and how customers can get in touch"></p>
+<p>It also went to extraordinary and humbling efforts to protect its people. But beyond the initial phase, we did see burnout - as you’d expect, some folks didn’t survive the inevitable fallout, but there was also a good degree of fatigue with how external contractors were being managed and how voices were not heard.</p>
+<h4 id="your-people">Your people</h4>
+<p>Organisations need to draw a connection between cyber risk and human capital. The lower the value they place on IT, on cyber risk, the lower the value they inherently place on the people turning the wheels. IT security measures are part of the apparatus required to nurture your people. Help safeguard those people by listening to them, maintain an open dialogue.</p>
+<h3 id="empowerment-and-agility">Empowerment and agility</h3>
+<p>I’m not talking about project delivery; This post is already too long! But the amount of time  (and so, money) organisations waste talking about progress and cost efficiency, rather than making actual tangible progress - is eye watering. To do X will cost Y but people will spend 20xY talking about the cost of X before finally doing it.</p>
+<p>Empower people to make decisions and make moves. Decisions don’t need to be written in stone. Things don’t need to be perfect. This is how the industry works now. Evergreen. Continual improvement. The days of multi-year release cycles are long gone. Move with it. Allow things to change and make progress.</p>
+<p>We saw this in the recovery, if we had waited until everything was perfect, Maersk wouldn’t be here today. And that spirit of movement and action was invigorating. Perhaps moving to an agile delivery method whereby you focus on delivery is what this section is about after all!</p>
+<h3 id="have-a-plan">Have a plan</h3>
+<p>Business continuity plans are vital, it’s obvious when you say it. But seriously, at whatever level of the organisation you are, there are things you can do to plan for the worst. No literally, the worst. No worse than that, I mean the absolute worst that you can possibly think of. Plan for that because when it all goes bang, you will seriously thank yourself.</p>
+<h3 id="do-the-basics">Do the basics</h3>
+<p><strong>This is probably the most important section of this entire post.</strong></p>
+<p>70% is a big number. That’s how many of these events start with a compromised identity. So, you really, really want to manage your identities well. You want to manage their access well. Every single week another sorry tale appears of another organisation taken out by the same process:</p>
+<p>Identity compromise, digital foothold, lateral movement, privileged creds, lost enterprise or stolen data. This is how it happens time and time again.</p>
+<h4 id="basics-1-stop-talking-start-doing">Basics #1 Stop talking. Start doing.</h4>
+<p>You can accept risks forever and a day but at some point, it WILL bite you and someone WILL end up doing the work in the end. Call this technology debt or whatever you like. But please, for your own sake, get on with the basics.</p>
+<p>And no matter what people tell you, this does not have to be hard. It can be, but doing the basics is straight forward enough. Set the rules, build systems to those rules and gradually migrate legacy systems in or sunset them. But don’t waste days, weeks, months or even years failing to act. Don’t just talk about it. The fateful day may come at any time.</p>
+<p>One constant argument about cracking on is the impact to this or the impact to that. Let me tell you, when the lights went out, it was amazing how quickly the entire organisation , globally, flipped over to WhatsApp. Without so much as a single communications planning session or project plan. Human beings are much more resilient than we give them credit for. If you have a fire burning, you put it out.</p>
+<h4 id="basics-2-enforce-mfa">Basics #2 Enforce MFA</h4>
+<p>I cannot word this strongly enough. Enable MFA for everybody and enforce it. Don’t wait for them to be compromised and then regret it. It’s 2020, not 1990 - people can work this stuff. If they have issues with having ‘work things’ on their phones, challenge that statement. This isn’t the pre-iPhone era, people have hundreds of apps, and will use MFA all the time for things like banking and social media. It is not a new concept, nor a difficult one to grasp. In 2020, it is a basic protection against the threats of the day. Those 20-year-old Active Directory password policies will not help you. Microsoft provides pre-canned guidance and instructional videos if needed. Do whatever it is you must but get MFA out there. And get registration enforced.</p>
+<h4 id="basics-3-prevent-people-from-using-common-passwords">Basics #3 Prevent people from using common passwords</h4>
+<p>We’ve discussed MFA, let’s talk about the password. The most common method of compromising identity today is via the password spray attack. An attacker will pick one of the <a href="https://www.troyhunt.com/pwned-passwords-version-6/">most-used passwords</a> (which, it’s depressing how common these are) and spray that password against an identity service. Once they compromise an identity, if you haven’t taken care of MFA or the other access controls we discuss here, you’ve potentially just lost the organisation.</p>
+<p>Azure AD Password Protection is a simple, low maintenance way of dealing with this. It will detect when users attempt to use a common password and stop them. Of course, this will increase the ‘friction’ involved in setting passwords – but there’s something we can do about this too.</p>
+<p>With MFA enforced, and Password Protection in place, NCSC and Microsoft now recommend removing password complexity, removing password expiration, and minimising password length to 8 characters. We don’t live in an office + datacentre world anymore. The world is connected. The major threats to your identities are managed by MFA and password protection, and with those enforced as a minimum you can relax those password policies. So, it’s not just a stick, we have a carrot too!</p>
+<p>Moving beyond the basics on this point leads to more robust PAM solutions that will cycle passwords automatically but those are really a step beyond what I&rsquo;d classify as a basic control.</p>
+<h4 id="basics-4-consider-doing-authentication-the-right-way">Basics #4 Consider doing authentication The Right Way</h4>
+<p>What I’m suggesting here will give you performance, availability, and protection.</p>
+<p>Step 1: Enable Password Hash Sync, this way you can look up compromised cred reports or even better enable Identity Protection.</p>
+<p>Step 2: Enable Azure AD SSO, it’s faster than making authentication do a hairpin back on-premises to AD FS. And access to cloud resources will remain available if AD goes pop.</p>
+<p>Step 3: Enable Azure AD device registration, it doesn’t impact how you manage devices, but does give you a nice feature in Conditional Access whereby you can say a device must be domain joined. Don’t do this until you’ve enabled Azure AD SSO first, otherwise you’re baking in a dependency on AD FS and you won’t be able to move off it easily.</p>
+<p>Step 4: Make sure to have some Windows Server 2016 or later domain controllers and update your domain controller certificates to the Domain Controller Authentication (Kerberos) template with superseding enabled to replace the older ones. Be warned; If you have domain joined systems prior to (God forbid) Windows 2003 SP2 or even XP SP3, you need to ditch that stuff before proceeding – they won’t understand the SHA2 domain controller certificates. Then enable Windows Hello for Business using the <a href="%22https://docs.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-hybrid-key-trust">Key Trust</a> method.</p>
+<p>Going this route has all kinds of benefits but believe me, this is the simplest and most effective way to make your world a better place.</p>
+<p>For your shared device folks (e.g. front-line workers) you’ll run into Trusted Protection Module (TPM) chip capacity limits and you’ll need FIDO2 keys. They’re easy to deploy and manage even via self-service. For the C-suite and AD Domain Admins or Azure AD Global Admins, consider FIDO2 keys with the biometric option, they’re super-triple-secure, and super simple to manage.</p>
+<p>Step 5: Get your break-glass account process in order.</p>
+<h4 id="basics-5-protect-those-identities">Basics #5 Protect those identities</h4>
+<p>If you have the budget, please go for the AAD P2 or M365 E5 license. The Identity Protection feature is magical in the literal sense. It is highly likely that right now you have one or more compromised identities and you have no clue about it. Organisations rarely know about compromised users until it is far too late. Identity Protection is like having a huge bouncer on the door. If a sign-in looks strange, it will enforce MFA even if it wouldn’t normally be needed in that situation. If the credential appears on the dark web, it’s got its ear to the ground and will force a password reset. I’ve seen this literally save the user account of the CEO. If you have the funds, it’s well worth it. If not, you at least have the compromised creds report – so at a minimum you can have someone monitor that each day. But Azure AD Password Hash Sync (PHS) is what you need to enable for that to work. This is recommended by both Microsoft (obviously) and the National Cyber Security Center (relevant for me here in the UK).</p>
+<h4 id="basics-6-get-your-privileged-access-baseline-in-order">Basics #6 Get your privileged access baseline in order</h4>
+<p>If your administrators are used to having access to all things, at all times, it’s high time for them to change.</p>
+<p>All versions of Windows have a basic set of policies called User Account Controls. These are what you will use to prevent that lateral movement, which is what malware uses to trash organisations over, and over, and over again. Using these controls consistently, and across the entire organisation, is where you need to get to. There is no use applying the white glove treatment to Important Thing X, when it&rsquo;s less well-looked after systems which is where the attacker will gain a foothold. The baseline matters.</p>
+<p>No amount of risk acceptance can really get you around this. Whether this is by strictly adhering to the Microsoft <a href="https://docs.microsoft.com/en-us/security/compass/privileged-access-access-model">Tiered Access Model</a> or going for something a little lighter, at the very least you should:</p>
+<ul>
+<li>Ensure that admin, service and application accounts are used exclusively for workstations, or servers, or domain controllers. At least as far as that&rsquo;s possible, the TAM describes how accounts can be used across the boundaries, but the concept is simple enough. For example, have a type of admin account for workstations, a type of admin account for servers, and then a type of account for domain/enterprise admins.</li>
+<li>If possible, provide those three categories with specific classes of admin workstation. At the very least have the concept of an ‘admin workstation’ so those tasty credentials aren’t exposed to the internet so much. The concept is to limit what can be impacted if a specific device or identity is compromised. With every measure we’re making it harder for an attacker to succeed.</li>
+<li>Make sure some of the default entries in these policies are removed, you really don’t want your domain admin credentials exposed on devices up and down the organisation. They absolutely shouldn’t be signing into a workstation that has Outlook installed or is used for web browsing!</li>
+<li>Ensure that administrators don’t have admin access to ALL workstations or ALL servers (or even large numbers of those) at any one time. Ideally access should only be as needed. Don’t leave huge swathes of your organisation open to any one account. Break things down into smaller groups and open access up on that basis rather than to individual systems, make it practical.</li>
+<li>Restrict access to application-level groups. Don’t have ‘ALL DATACENTRE X’ type groups. If a user is a member of that group and gets compromised, you’ve immediately lost that datacentre. Similar for databases, don’t use ‘ALL SQL SERVER’ type groups for the same reasons. Keep things tied to apps.</li>
+<li>Constrain service/application accounts. Deny them interactive logon. Outlaw their entry into local admin groups. Use your reporting systems to capture those local admin group change events and if a service account appears, first advise and teach, and if it keeps happening then maybe unleash hell.</li>
+<li>Enforce local admin groups via policy. If you don’t, and don’t set the rules, you will have all kinds of scary nonsense going on and you will be at significant risk.</li>
+<li>Use <a href="https://www.microsoft.com/en-us/download/details.aspx?id=46899">&gt;LAPS</a>! There is no need to have stale local administrator passwords in your environment. LAPS is a standard, supported Microsoft tool you can enable today that will manage all that for you. And you can easily control who can access those passwords. Don’t let people have at it. Implement reporting to alert when local administrator accounts are used for sign-in, have people answer to that behaviour, need a ticket or whatever, there shouldn’t be a need to use essentially anonymous administrator access.</li>
+<li>Don&rsquo;t synchronise your most highly trusted accounts. Domain Admins have no business signing into Azure. And you don&rsquo;t want to risk losing Azure Global Admins to a compromise of AD. Control your &lsquo;blast zones&rsquo;.</li>
+<li>Minimise highly privileged groups. You shouldn&rsquo;t need more than a small handful of accounts in Domain or Global Admin level groups. Delegation exists for a reason. And for those Global Admin and similarly powerful Azure AD groups, I strongly suggest Azure AD Privileged Identity Management to limit access to those roles. It&rsquo;s a life saver. Yes it requires AAD P2 or an M365 E5 license, but only for the accounts that are added to those powerful roles which, if you&rsquo;ve minimised membership won&rsquo;t be too many people.</li>
+</ul>
+<p>There’s always <a href="https://aka.ms/SPA">more to be done</a>, but I’d recommend these as a good place to start. Each one of these bullets will really move you along the path to a more secure place.</p>
+<p>Now I can just hear a hundred people all saying (because I’ve heard these voices before):</p>
+<p>Yes but, that sounds difficult. Yes but, that sounds expensive. Yes but, that will take a long time. Yes but, we ‘need’ (like) having access all the time.</p>
+<p>Losing everything will be much more difficult, will be a lot more expensive, and will take a much greater length of time, and will cost peoples jobs, relationships, or worse. These are basics. Like locking your front door. Or having a PIN on your bank card. It’s a shame Microsoft didn’t bake these controls in deeper out of the box back in 2000, but here we are. Get to it. Update those contracts, sort your processes, whatever. After decades of misuse, people are used to constantly having access to everything without restrictions. In June 2017 for Maersk, but every week for some organisation, this was and continues to be proved wrong. The best way I&rsquo;ve found to think of it is this; Be like Marie Kondo and remove the unnecessary, or like Lotus Cars and &lsquo;simplify, then add lightness&rsquo;. Someone carrying too much access is also carrying a worrying degree of responsibility.</p>
+<p>Your organisation is, I bet, no different. The game is giving users a nice experience but making it hard for the bad guy. Your users and administrators alike simply need to understand their accounts present a tangible threat to the organisation and everyone needs to chip in to help limit these threats.</p>
+<p>Can you tell I am dead set against any organisation repeating these same mistakes? Here, I even made a meme:</p>
+<p><img src="../gvnshtn.github.io/public/images/pam.jpg" alt="Cartoon styled meme describing scenario where someone who attempts to avoid privileged access controls gets thrown out of a window."></p>
+<h2 id="other-measures">Other measures</h2>
+<p>This post is focussed on identity and access. But just as critical are other aspects of the environment:</p>
+<ul>
+<li>Maintain a list of business-critical applications. Make sure these receive priority when it comes to continuity planning and security measures. That&rsquo;s not to say apply measure to critical systems and not to others, the whole environment is a threat to everything else. It&rsquo;s about establishing a consistent baseline. But the critical stuff should receive Better Measures first once they&rsquo;ve been tested.</li>
+<li>Out of support operating systems should represent a critical priority action for the IT organisation, particularly where those systems serve core business systems. Not only do these systems represent a critical vulnerability, they are likely inhibiting you from adopting other more modern capabilities.</li>
+<li>Do not delay patches and updates. Security patches, AV definitions and so on - that stuff shouldn&rsquo;t be sat waiting. Get those deployed. Set a maximum delta. Any systems not patched, consider an automated quarantine process. Make the application owners accountable.</li>
+<li>Do data. Without data it is impossible to demonstrate the scale of the issue and plan your approach. A bad approach is to do this using centralised tooling i.e. an account run from a particular system that goes out to the estate and gathers information into a central store. A decentralised approach will see individual systems report data in. This way you minimising exposure of the entire environment to a particular account.</li>
+</ul>
+<p>There&rsquo;s other measures, but these will do - I need to get this posted some day. We can talk more in the comments!</p>
+<hr>
+<h2 id="further-reading">Further reading</h2>
+<p>First link is to the excellent Wired article <a href="https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world">The Untold Story of NotPetya, the Most Devastating Cyberattack in History</a> (<a href="https://twitter.com/a_greenberg">Andy Greenberg</a>) that also describes the events.</p>
+<p>The <a href="https://aka.ms/goPasswordless">Microsoft Passwordless Strategy</a>is a long-term goal, and doesn’t fall into the list of things you’ll be able to achieve quickly, but it’s a great target, as is the <a href="https://aka.ms/ZTguide">Zero Trust</a> principle. Both are born out of the new reality of the way digital systems interact in the new millennium.</p>
+<p>I’ll refer again to the <a href="https://aka.ms/MCRA">Microsoft Cybersecurity Reference Architecture</a> which remains a consistently great source of advice.</p>
+<p>Finally, I’m painfully aware that I’ve barely touched the cloud. A lot of the fires burning today are on-premises. But that doesn’t mean you can take your eye off where things are headed. As a minimum, <a href="https://aka.ms/CAF">the Cloud Adoption Framework</a> is a great source but all I&rsquo;d state here is this: Now is the time to get your cloud governance in place. Move to an Infrastructure-as-Code management approach for your platform. Adopt agile principles (not just in name or a JFDI sense, actually do it). Establish the ground rules. Deploy Azure Policy. Get the basics done now, and not in 20 years time as is the case for so many back in Active Directory. It&rsquo;s a lot easier to start off on the right foot today, than it is to reverse-engineer a decade or two of mistakes.</p>
+<hr>
+<h2 id="thank-you">Thank you!</h2>
+<p>I really hope you found this interesting and useful, and that you might take away something tangible to push for progress within your own organisation or for your customers.</p>
+<p>If there’s one thing I hope to achieve from this post, it’s that at least one organisation takes this advice and actually starts <strong>doing</strong> things a little better. If you want some help doing that, leave a comment, or catch me at <a href="https://www.linkedin.com/in/gavinashton/">LinkedIn</a> or <a href="https://twitter.com/gvnshtn">Twitter</a>.</p>
+<p>Thanks for reading, and stay safe.</p>
+<p>Gavin.</p>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-twitter">
+        <a href="https://twitter.com/gvnshtn" title="Twitter" target="_blank" rel="noopener">
+          <img src="/images/social/twitter.svg" width="24" height="24" alt="Twitter"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/gvnshtn" title="GitHub" target="_blank" rel="noopener">
+          <img src="/images/social/github.svg" width="24" height="24" alt="GitHub"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-linkedin">
+        <a href="https://www.linkedin.com/in/gvnshtn/" title="Linkedin" target="_blank" rel="noopener">
+          <img src="/images/social/linkedin.svg" width="24" height="24" alt="Linkedin"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/bundle.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+      
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3YGYDZTHZ1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W3YGYDZTHZ1');
+      </script>
+    
+  
+
+
+</body>
+</html>

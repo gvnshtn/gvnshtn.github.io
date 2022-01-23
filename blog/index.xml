@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Gavin Ashton</title>
+    <link>https://gvnshtn.com/blog/</link>
+    <description>Recent content in Blogs on Gavin Ashton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Jun 2020 23:52:19 +0000</lastBuildDate><atom:link href="https://gvnshtn.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Maersk, me &amp; Notpetya</title>
+      <link>https://gvnshtn.com/blog/maersk-me-notpetya/</link>
+      <pubDate>Sun, 21 Jun 2020 23:52:19 +0000</pubDate>
+      
+      <guid>https://gvnshtn.com/blog/maersk-me-notpetya/</guid>
+      <description>Maersk is the world&amp;rsquo;s largest integrated shipping and container logistics company. I was massively privileged (no pun intended) to be their Identity &amp;amp; Access Management (IAM) Subject Matter Expert (SME), and later IAM Service Owner. Along with tens (if not hundreds) of others, I played a role in the recovery and cybersecurity response to the events of the well-publicised notPetya malware attack in 2017. I left Maersk in March 2019, and as is customary I wrote the obligatory thank you and goodbye note.</description>
+    </item>
+    
+  </channel>
+</rss>

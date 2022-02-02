@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://gvnshtn.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Farewell, Mat</title>
+      <link>https://gvnshtn.com/posts/farewellmat/</link>
+      <pubDate>Wed, 02 Feb 2022 17:50:01 +0000</pubDate>
+      
+      <guid>https://gvnshtn.com/posts/farewellmat/</guid>
+      <description>Today we laid a friend to rest. I met Mat Rawlings when I was a consultant at Oxford Computer Group (or ThirdSpace as it&amp;rsquo;s now known). We didn&amp;rsquo;t work together nearly as much as I would have liked, but when we did, we had great fun. It was when we discovered we shared a love of cycling that things got interesting. We ended up cycling the London to Paris 24hr together for Scope, as well as a slew of other events, and it was in the process of training and taking part in these that we became firm friends.</description>
+    </item>
+    
+    <item>
       <title>Gavs List</title>
       <link>https://gvnshtn.com/posts/gavslist/</link>
       <pubDate>Fri, 21 Jan 2022 14:00:00 +0000</pubDate>
@@ -33,15 +42,6 @@ My approach to email We all know managing an inbox is no simple task.</descripti
       
       <guid>https://gvnshtn.com/posts/maersk-me-notpetya/</guid>
       <description>Maersk is the world&amp;rsquo;s largest integrated shipping and container logistics company. I was massively privileged (no pun intended) to be their Identity &amp;amp; Access Management (IAM) Subject Matter Expert (SME), and later IAM Service Owner. Along with tens (if not hundreds) of others, I played a role in the recovery and cybersecurity response to the events of the well-publicised notPetya malware attack in 2017. I left Maersk in March 2019, and as is customary I wrote the obligatory thank you and goodbye note.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://gvnshtn.com/posts/farewellmat/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gvnshtn.com/posts/farewellmat/</guid>
-      <description></description>
     </item>
     
   </channel>

@@ -1,0 +1,6 @@
+open terminal (Ctrl+')
+git status to see which branch we're in
+verify there's changes waiting to be published
+Run this to add changes: git add .
+Run this to commit the changes including a message: git commit -m Update x
+Run this to publish: git push origin master
